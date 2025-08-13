@@ -26,7 +26,7 @@ If looking for both positive and negative values, only if significant based on c
 ```{r tstat plot2way}
 ggseg(.data=df[df$pval < 0.05,], atlas="lausanne125", mapping=aes(fill=tstat)) + 
 	labs(title=paste(group1, "&", group2, sep=" "), fill="t-stat (p<0.05 unc)") + 
-	scale_fill_gradient2(low="firebrick",high="blue") + 
+	scale_fill_gradient2(low="firebrick", mid="white",high="blue",midpoint=0) + 
 	theme_custombrain(plot.background = "white") + 
 	theme(text=element_text(colour="black"))
 ```
